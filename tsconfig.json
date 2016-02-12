@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "jsx": "react",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "outDir": "dist"
+  },
+  "files": [
+    "typings/bundle.d.ts",
+    "src/server.tsx"
+  ]
+}

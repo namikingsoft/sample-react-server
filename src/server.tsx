@@ -1,6 +1,6 @@
-import express from 'express'
-import React from 'react'
-import ReactDOMServer from 'react-dom/server'
+import * as express from 'express'
+import * as React from 'react'
+import * as DOMServer from 'react-dom/server'
 import Counter from './components/Counter'
 
 // init express
@@ -12,7 +12,7 @@ app.use(express.static('public'))
 // add top page routing
 app.get('/', (req, res) => {
   res.send(
-    ReactDOMServer.renderToString(
+    DOMServer.renderToString(
       <div>
         <div id="app">
           <Counter />

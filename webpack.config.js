@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    client: "./src/client.js",
+    client: "./src/client.tsx",
   },
   output: {
     filename: '[name].js',
@@ -15,10 +15,15 @@ module.exports = {
         loaders: ['babel'],
         exclude: /node_modules/,
       },
+      {
+        test: /\.tsx?$/,
+        loaders: ['ts'],
+        exclude: /node_modules/,
+      },
     ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['', '.js', '.jsx', 'ts', '.tsx'],
     modulesDirectories: ['node_modules'],
   },
 };
